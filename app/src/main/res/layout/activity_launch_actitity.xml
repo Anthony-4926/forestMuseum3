@@ -5,10 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".LaunchActitity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="我是起始页"
-        android:textSize="50dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/launch"/>
 
 </android.support.constraint.ConstraintLayout>
