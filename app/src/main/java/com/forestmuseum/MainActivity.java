@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.forestmuseum.HelpFragment;
+import com.forestmuseum.LocalFragment;
+import com.forestmuseum.Mefragement;
+import com.forestmuseum.R;
+import com.forestmuseum.home_fragment;
+
 public class MainActivity extends Activity {
 
 

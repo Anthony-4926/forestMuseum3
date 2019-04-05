@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.forestmuseum.R;
+
 public class LoginActivity extends Activity {
     private String userName;
     private String password;
