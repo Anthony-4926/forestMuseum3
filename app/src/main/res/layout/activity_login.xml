@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/backcolor"
+    android:background="@drawable/login_regist_back_img"
+
     tools:context=".LoginActivity">
     <TextView
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
         android:textSize="20dp"
         android:padding="10dp"
         android:gravity="center_horizontal"
-        android:background="#19bc90"
+        android:background="@color/backcolor"
         android:textColor="#ffffff"/>
 
     <ImageView

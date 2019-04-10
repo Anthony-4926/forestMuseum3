@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="60dp">
 
+    <ImageView
+        android:id="@+id/unit_img"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:scaleType="fitXY" />
+<!--
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -19,6 +25,6 @@
         android:layout_height="match_parent"
         android:layout_weight="0.6"
         android:textSize="12dp"
-        />
+        />-->
 
 </LinearLayout>

@@ -4,14 +4,15 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
-
-import com.forestmuseum.adapter.Adapter;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,10 +59,21 @@ public class ListActivity extends Activity {
 
 
         /********************************单元列表************************************/
-        ListView listView =  ListActivity.this.findViewById(R.id.unitList);
-        Adapter adapter = new Adapter(this, getData(), R.layout.unit_item,
-                new String[]{"title", "subTitle"}, new int[]{R.id.title, R.id.subTitle});
+        ListView listView = ListActivity.this.findViewById(R.id.unitList);
+//        创建适配器
+        SimpleAdapter adapter = new SimpleAdapter(this, getData(), R.layout.unit_item,
+                new String[]{"unit_img"}, new int[]{R.id.unit_img});
         listView.setAdapter(adapter);
+
+//        添加监听
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+//                Toast.makeText(ListActivity.this, String.valueOf(id),Toast.LENGTH_SHORT).show();
+            }
+
+        });
     }
 
 
@@ -76,55 +88,49 @@ public class ListActivity extends Activity {
         }
     };
 
+    /**
+     * 创建item资源
+     * @return
+     */
     private List<Map<String, Object>> getData() {
         List<Map<String, Object>> list = new ArrayList<>();
         Map<String, Object> map = new HashMap<>();
-        map.put("title", "00/序厅");
-        map.put("subTitle", "");
+        map.put("unit_img", R.drawable.unit00);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "01/第一单元");
-        map.put("subTitle", "森林的演化与分布");
+        map.put("unit_img", R.drawable.unit01);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "02/第二单元");
-        map.put("subTitle", "中国森林的分类与分布");
+        map.put("unit_img", R.drawable.unit02);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "03/第三单元");
-        map.put("subTitle", "森林动物");
+        map.put("unit_img", R.drawable.unit03);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "00/序厅");
-        map.put("subTitle", "");
+        map.put("unit_img", R.drawable.unit04);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "00/序厅");
-        map.put("subTitle", "");
+        map.put("unit_img", R.drawable.unit05);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "00/序厅");
-        map.put("subTitle", "");
+        map.put("unit_img", R.drawable.unit06);
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "00/序厅");
-        map.put("subTitle", "");
+        map.put("unit_img", R.drawable.unit07);
         list.add(map);
-
-        map = new HashMap<>();
-        map.put("title", "00/序厅");
-        map.put("subTitle", "");
-        list.add(map);
-
         return list;
     }
 
+    private Activity selectActivity(long id) {
+        Activity activity = null;
+        return activity;
+    }
 
 }
