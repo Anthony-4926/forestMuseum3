@@ -1,15 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
     tools:context=".Mefragement">
 
-    <!-- TODO: Update blank fragment layout -->
     <ImageView
+        android:id="@+id/head_area"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/unit03"
-        android:scaleType="fitXY"/>
+        android:layout_height="200dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/carousel_01"
+        />
 
-</FrameLayout>
+    <RelativeLayout
+        android:id="@+id/anwser_question"
+        android:layout_below="@+id/head_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/answer_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/head"/>
+            <TextView
+                android:layout_toRightOf="@+id/answer_img"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我要答题"
+                android:textSize="16dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/save"
+        android:layout_below="@+id/head_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/save_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/head"/>
+        <TextView
+            android:layout_toRightOf="@+id/save_img"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set"
+        android:layout_below="@+id/head_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/set_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/head"/>
+        <TextView
+            android:layout_toRightOf="@+id/set_img"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

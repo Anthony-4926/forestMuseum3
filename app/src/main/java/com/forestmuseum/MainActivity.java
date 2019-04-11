@@ -8,11 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.forestmuseum.HelpFragment;
-import com.forestmuseum.LocalFragment;
-import com.forestmuseum.Mefragement;
-import com.forestmuseum.R;
-import com.forestmuseum.home_fragment;
 
 public class MainActivity extends Activity {
 
@@ -21,6 +16,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setListenerForFragment();
+        System.out.println("我出啊弄见了");
+    }
+
+    /**
+     * 给fragment设置监听
+     */
+    public void  setListenerForFragment() {
         ImageView imageView1 = (ImageView) findViewById(R.id.home);//获取布局文件的第一个导航图片
         ImageView imageView2 = (ImageView) findViewById(R.id.location);//获取布局文件的第二个导航图片
         ImageView imageView3 = (ImageView) findViewById(R.id.help);//获取布局文件的第三个导航图片
@@ -54,6 +57,7 @@ public class MainActivity extends Activity {
                 default:
                     break;
             }
+
             ft.replace(R.id.fragment, f);
             ft.commit(); //提交事务
         }
