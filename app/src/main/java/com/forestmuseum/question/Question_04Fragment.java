@@ -1,11 +1,12 @@
 package com.forestmuseum.question;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.forestmuseum.QuestionActivity;
@@ -32,8 +33,9 @@ public class Question_04Fragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
-                System.out.println("我选了"+id);
-                if (id==13){
+                String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
+                System.out.println(anwser);
+                if ("A. 体型小，颜色深".equals(anwser)){
                     QuestionActivity.scores[3]=1;
                 }else{
                     QuestionActivity.scores[3]=0;

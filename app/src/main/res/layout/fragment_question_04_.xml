@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_horizontal_margin"
     android:background="#fff"
     tools:context=".question.Question_04Fragment">
 
@@ -14,28 +13,22 @@
     <RadioGroup
         android:id="@+id/question4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="4.关于宝宝说法不正确的是"
+            style="@style/question_title_style"
+            android:text="4. 华南虎与东北虎的区别在于【 】" />
+        <RadioButton
+            android:text="A. 体型小，颜色深"
+            style="@style/radio_button_style"
             />
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="A. 我有一个臭臭" />
+            style="@style/radio_button_style"
+            android:text="B. 体型大，颜色深" />
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="B. 这个臭臭可臭了" />
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="C. 要多臭有多臭" />
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="D. 我可爱这个臭臭了" />
+
+            style="@style/radio_button_style"
+            android:text="C. 体型小，颜色浅" />
 
 
     </RadioGroup>

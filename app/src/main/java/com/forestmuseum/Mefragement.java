@@ -1,8 +1,8 @@
 package com.forestmuseum;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +42,7 @@ public class Mefragement extends Fragment {
     View.OnClickListener l = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
-            System.out.println("点我干啥");
+            Toast.makeText(getActivity(), "功能待开发", Toast.LENGTH_LONG).show();
         }
     };
 }

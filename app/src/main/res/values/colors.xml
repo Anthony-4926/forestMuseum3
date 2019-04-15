@@ -7,4 +7,7 @@
     <color name="dot_black">#363636</color>
     <color name="backcolor">#00cc99</color>
     <color name="input_back_color">#B3ffffff</color>
+    <color name="radio_button_back_color">#dfdcdc</color>
+    <color name="question_title_back_color">#00cc99</color>
+    <color name="question_anwser_color">#55ccaf</color>
 </resources>

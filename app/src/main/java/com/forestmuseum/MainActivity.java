@@ -21,12 +21,12 @@ public class MainActivity extends Activity {
         ft.add(R.id.fragment, home);
         ft.commit();
         setListenerForFragment();
-}
+    }
 
     /**
      * 给fragment设置监听
      */
-    public void  setListenerForFragment() {
+    public void setListenerForFragment() {
         ImageView imageView1 = (ImageView) findViewById(R.id.home);//获取布局文件的第一个导航图片
         ImageView imageView2 = (ImageView) findViewById(R.id.location);//获取布局文件的第二个导航图片
         ImageView imageView3 = (ImageView) findViewById(R.id.help);//获取布局文件的第三个导航图片
@@ -50,15 +50,12 @@ public class MainActivity extends Activity {
                     break;
                 case R.id.location:
                     f = new LocalFragment();//创建第二个Fragment
-                    System.out.println("第2个被点了");
                     break;
                 case R.id.help:
                     f = new HelpFragment();//创建第三个Fragment
-                    System.out.println("第3个被点了");
                     break;
                 case R.id.me:
                     f = new Mefragement();//创建第四个Fragment
-                    System.out.println("第四个被点了");
                     break;
                 default:
                     break;

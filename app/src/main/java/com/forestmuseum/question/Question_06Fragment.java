@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.forestmuseum.QuestionActivity;
@@ -33,10 +34,12 @@ public class Question_06Fragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
-                if (id==21){
-                    QuestionActivity.scores[4]=1;
+                String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
+                System.out.println(anwser);
+                if ("B. 马来熊".equals(anwser)){
+                    QuestionActivity.scores[5]=1;
                 }else{
-                    QuestionActivity.scores[4]=0;
+                    QuestionActivity.scores[5]=0;
                 }
             }
         });

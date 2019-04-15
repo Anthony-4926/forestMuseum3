@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 
 import com.forestmuseum.question.Question_01Fragment;
@@ -88,7 +89,7 @@ public class QuestionActivity extends Activity {
                         s+=scores[i];
                     }
                     s*=10;
-                    System.out.println(s);
+                    Toast.makeText(QuestionActivity.this, "我得了" + s, Toast.LENGTH_LONG).show();
                     Intent intent = new Intent();
                     intent.putExtra("score", s);
                     setResult(200,intent);

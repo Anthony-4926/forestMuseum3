@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.forestmuseum.QuestionActivity;
@@ -32,10 +33,13 @@ public class Question_07Fragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
-                if (id==25){
-                    QuestionActivity.scores[6]=1;
-                }else{
-                    QuestionActivity.scores[6]=0;
+                String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
+                System.out.println(anwser);
+                if ("B. 错".equals(anwser)) {
+
+                    QuestionActivity.scores[6] = 1;
+                } else {
+                    QuestionActivity.scores[6] = 0;
                 }
             }
         });

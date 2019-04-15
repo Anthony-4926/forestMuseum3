@@ -48,12 +48,9 @@ public class UserService {
         try {
             // 创建File对象
             File file = new File(context.getFilesDir(), "info.properties");
-
             System.out.println(context.getFilesDir());
             // 创建FileIutputStream 对象
             FileInputStream fis = new FileInputStream(file);
-
-
 
             // 创建属性对象
             Properties pro = new Properties();
@@ -61,8 +58,6 @@ public class UserService {
             pro.load(fis);
             // 关闭输入流对象
             fis.close();
-
-
             return pro;
         } catch (Exception e) {
             e.printStackTrace();

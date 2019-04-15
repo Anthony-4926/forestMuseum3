@@ -8,4 +8,31 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="radio_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/radio_buttono_shape</item>
+        <item name="android:textColor">@color/question_anwser_color</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="question_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/question_title_back_color</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+
+    </style>
+
 </resources>
