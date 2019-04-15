@@ -4,21 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.forestmuseum.home_fragment"
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_above="@+id/menu"
+        android:id="@+id/fragment"
+        ></FrameLayout>
+
+    <!--底部actionbar-->
     <LinearLayout
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="@color/backcolor"
         >
+
 
     <ImageView
         android:id="@+id/home"
@@ -49,5 +55,7 @@
         android:src="@drawable/me"
         />
     </LinearLayout>
+
+
 
 </RelativeLayout>

@@ -10,15 +10,18 @@ import android.widget.ImageView;
 
 
 public class MainActivity extends Activity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        加载homefragment
+        home_fragment home = new home_fragment();
+        FragmentManager fm = getFragmentManager();   // 获取Fragment
+        FragmentTransaction ft = fm.beginTransaction(); // 开启一个事务
+        ft.add(R.id.fragment, home);
+        ft.commit();
         setListenerForFragment();
-        System.out.println("我出啊弄见了");
-    }
+}
 
     /**
      * 给fragment设置监听
@@ -47,19 +50,23 @@ public class MainActivity extends Activity {
                     break;
                 case R.id.location:
                     f = new LocalFragment();//创建第二个Fragment
+                    System.out.println("第2个被点了");
                     break;
                 case R.id.help:
                     f = new HelpFragment();//创建第三个Fragment
+                    System.out.println("第3个被点了");
                     break;
                 case R.id.me:
                     f = new Mefragement();//创建第四个Fragment
+                    System.out.println("第四个被点了");
                     break;
                 default:
                     break;
             }
-
             ft.replace(R.id.fragment, f);
             ft.commit(); //提交事务
         }
     };
+
+
 }
