@@ -5,7 +5,10 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.RadioButton;
+
+
 import android.widget.RadioGroup;
 
 
@@ -36,7 +39,7 @@ public class Question_01Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
                 String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
-                System.out.println(id);
+                System.out.println(anwser);
                 if ("B. 秘鲁".equals(anwser)){
                     QuestionActivity.scores[0]=1;
                 }else{

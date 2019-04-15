@@ -25,7 +25,7 @@
 
     <style name="question_title_style">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">60dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@color/question_title_back_color</item>
         <item name="android:textColor">#fff</item>

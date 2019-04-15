@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="#fff"
     tools:context=".question.Question_04Fragment">
 
@@ -13,6 +14,7 @@
     <RadioGroup
         android:id="@+id/question4"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:paddingBottom="25dp">
         <TextView
@@ -29,6 +31,8 @@
 
             style="@style/radio_button_style"
             android:text="C. 体型小，颜色浅" />
+
+
 
 
     </RadioGroup>

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#fff"
     tools:context=".question.Question_03Fragment">
 
@@ -14,6 +13,7 @@
     <RadioGroup
         android:id="@+id/question3"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:paddingBottom="25dp">
         <TextView
@@ -30,9 +30,9 @@
 
             style="@style/radio_button_style"
             android:text="C. 果花狸" />
+</RadioGroup>
 
 
-    </RadioGroup>
 
 
 

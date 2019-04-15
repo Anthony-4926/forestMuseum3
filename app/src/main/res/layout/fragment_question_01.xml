@@ -9,12 +9,12 @@
     <!-- TODO: Update blank fragment layout -->
 
 
+
     <RadioGroup
-        android:id="@+id/question"
+        android:id="@+id/question1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="25dp">
-
         <TextView
             style="@style/question_title_style"
             android:text="1. 欢乐女神蝶是【 】的国蝶。" />

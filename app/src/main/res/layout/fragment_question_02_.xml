@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="#fff"
     tools:context=".question.Question_02Fragment">
 
@@ -14,7 +15,7 @@
         android:id="@+id/question2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="25dp">
+        android:paddingBottom="10dp">
         <TextView
             style="@style/question_title_style"
             android:text="2. 世界上最小的鹤类是【 】" />
@@ -29,8 +30,6 @@
 
             style="@style/radio_button_style"
             android:text="C. 蓑羽鹤" />
-
-
     </RadioGroup>
 
 

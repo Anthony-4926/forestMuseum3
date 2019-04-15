@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     tools:context=".question.Question_10Fragment">
-
     <!-- TODO: Update blank fragment layout -->
-
 
     <RadioGroup
         android:id="@+id/question10"
@@ -26,10 +24,6 @@
         <RadioButton
             style="@style/radio_button_style"
             android:text="B. 雌" />
-
-
-
-
     </RadioGroup>
 
 
