@@ -30,7 +30,7 @@ public class Question_01Fragment extends Fragment {
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        radioGroup = getActivity().findViewById(R.id.question);
+        radioGroup = getActivity().findViewById(R.id.question1);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

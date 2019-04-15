@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/radio_button_back_color"
     android:orientation="vertical"
-
     tools:context=".QuestionActivity">
 
     <LinearLayout
@@ -97,5 +96,6 @@
 
 
 
+</LinearLayout>
 
 </LinearLayout>

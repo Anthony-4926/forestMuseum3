@@ -23,10 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".TipActivity" />
-        <activity android:name=".QuestionActivity" />
-        <activity android:name=".ShowScoreActivity" />
-        <activity android:name=".RegistActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".TipActivity"></activity>
     </application>
 
 </manifest>
