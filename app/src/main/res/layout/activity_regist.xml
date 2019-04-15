@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/login_regist_back_img"
-
     tools:context=".LoginActivity">
     <TextView
         android:layout_width="match_parent"
@@ -16,19 +15,12 @@
         android:padding="10dp"
         android:gravity="center_horizontal"
         android:background="@color/backcolor"
-        android:textColor="#ffffff"/>
+        android:textColor="#fff"
+        android:layout_marginBottom="50dp"/>
 
-    <ImageView
-
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="25dp"
-        android:src="@drawable/head"/>
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/r_userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -41,7 +33,7 @@
         android:singleLine="true" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/r_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -54,38 +46,32 @@
         android:paddingRight="40dp"
         android:singleLine="true" />
 
-    <Button
-        android:id="@+id/loginButton"
+
+    <EditText
+        android:id="@+id/confirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="登         录"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/eidt_text_shape"
+        android:hint="确认密码"
+        android:inputType="textPassword"
+        android:paddingRight="40dp"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/regist_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注         册"
         android:textSize="20sp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/login_button_shape"
-        android:textColor="#ffffff"
+        android:textColor="#fff"
         />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
-        <TextView
-            android:id="@+id/regist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="新用户注册"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
 
-        <TextView
-            android:id="@+id/forgetPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="忘记密码"
-            />
-    </LinearLayout>
 
 </LinearLayout>
