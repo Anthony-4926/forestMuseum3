@@ -25,7 +25,6 @@ public class Question_01Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_question_01, null);
         return view;
     }
-
     /**
      * 获取答案
      */
