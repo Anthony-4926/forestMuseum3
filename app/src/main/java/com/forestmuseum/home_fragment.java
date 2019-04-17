@@ -12,17 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  *
@@ -41,8 +34,8 @@ public class home_fragment extends Fragment {
     //    定义动画数组，为ViewFlipper指定切换动画
     private Animation[] animation = new Animation[2];
 
-
-
+    private int[] unitList = new int[]{R.drawable.unit00, R.drawable.unit01, R.drawable.unit02, R.drawable.unit03,
+            R.drawable.unit04, R.drawable.unit05, R.drawable.unit06, R.drawable.unit07};
 
     @Nullable
     @Override
@@ -77,25 +70,37 @@ public class home_fragment extends Fragment {
 
 /*******************************单元列表***********************************/
 
-        ListView listView = getActivity().findViewById(R.id.unitList);
-//        创建适配器
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(), getData(), R.layout.unit_item,
-                new String[]{"unit_img"}, new int[]{R.id.unit_img});
-        listView.setAdapter(adapter);
+        LinearLayout linearLayout = getActivity().findViewById(R.id.unit_list);
+        for (int i = 0; i < unitList.length; i++) {
+            ImageView imageView = new ImageView(getActivity());
+            imageView.setImageResource(unitList[i]);
+            imageView.setId(unitList[i]);
+//            imageView.setMaxHeight(70);
+            imageView.setAdjustViewBounds(true);
 
-//        添加监听
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(), String.valueOf(id),Toast.LENGTH_SHORT).show();
-                if(id==1){
-                    MediaPlayer mediaPlayer;
-                    mediaPlayer = MediaPlayer.create(getActivity(),R.raw.first_unit);
-                    mediaPlayer.start();
-                    startActivity(new Intent(getActivity(), Unit01DetailActivity.class));
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            linearLayout.addView(imageView);
+            ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
+            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            //        添加监听
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    Toast.makeText(getActivity(), String.valueOf(id),Toast.LENGTH_SHORT).show();
+                    if (v.getId() == unitList[1]) {
+                        startActivity(new Intent(getActivity(), Unit01DetailActivity.class));
+                        MediaPlayer mediaPlayer;
+                        mediaPlayer = MediaPlayer.create(getActivity(), R.raw.first_unit);
+                        mediaPlayer.start();
+                    } else {
+                        Toast.makeText(getActivity(), "单元待开发", Toast.LENGTH_SHORT).show();
+
+                    }
                 }
-            }
-        });
+            });
+        }
+
 
     }
 
@@ -109,48 +114,6 @@ public class home_fragment extends Fragment {
             handler.sendMessageDelayed(message, 3000);  //延迟3秒发送消息
         }
     };
-
-
-    /*
-     * 创建item资源
-     * @return
-     */
-
-    private List<Map<String, Object>> getData() {
-        List<Map<String, Object>> list = new ArrayList<>();
-        Map<String, Object> map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit00);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit01);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit02);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit03);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit04);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit05);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit06);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("unit_img", R.drawable.unit07);
-        list.add(map);
-        return list;
-    }
 
 
 }
