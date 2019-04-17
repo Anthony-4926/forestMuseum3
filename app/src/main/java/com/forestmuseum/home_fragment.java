@@ -1,8 +1,8 @@
 package com.forestmuseum;
 
-import android.os.Bundle;
 import android.app.Fragment;
-
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
@@ -15,8 +15,8 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
-
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -86,7 +86,10 @@ public class home_fragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(ListActivity.this, String.valueOf(id),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), String.valueOf(id),Toast.LENGTH_SHORT).show();
+                if(id==1){
+                    startActivity(new Intent(getActivity(), Unit01DetailActivity.class));
+                }
             }
         });
 

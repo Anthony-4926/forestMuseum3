@@ -24,8 +24,9 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".TipActivity">
-        </activity>
+        <activity android:name=".TipActivity" />
+        <activity android:name=".Unit01DetailActivity"></activity>
+        <activity android:name=".ItemFormatActivity"></activity>
     </application>
 
 </manifest>
