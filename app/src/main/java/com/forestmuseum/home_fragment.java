@@ -2,6 +2,7 @@ package com.forestmuseum;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -88,6 +89,9 @@ public class home_fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getActivity(), String.valueOf(id),Toast.LENGTH_SHORT).show();
                 if(id==1){
+                    MediaPlayer mediaPlayer;
+                    mediaPlayer = MediaPlayer.create(getActivity(),R.raw.first_unit);
+                    mediaPlayer.start();
                     startActivity(new Intent(getActivity(), Unit01DetailActivity.class));
                 }
             }

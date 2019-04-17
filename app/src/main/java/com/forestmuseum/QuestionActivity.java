@@ -4,16 +4,13 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-
 import android.widget.Toast;
-
-
-
 
 import com.forestmuseum.question.Question_01Fragment;
 import com.forestmuseum.question.Question_02Fragment;
@@ -84,24 +81,24 @@ public class QuestionActivity extends Activity {
                     }
                     ft.replace(R.id.questions, questionFragements[process]);
                     ft.commit(); //提交事务
-
-
                 }else{
                     int s=0;
                     for (int i = 0; i < scores.length; i++) {
                         s+=scores[i];
                     }
                     s*=10;
-
                     Toast.makeText(QuestionActivity.this, "我得了" + s, Toast.LENGTH_LONG).show();
-
-                    System.out.println(s);
-
-                    Intent intent = new Intent();
-                    intent.putExtra("score", s);
-                    setResult(200,intent);
-                   // startActivity(new Intent(QuestionActivity.this,ShowScoreActivity.class));
-                    //QuestionActivity.this.finish();
+                    ImageView scoreImg = findViewById(R.id.score_img);
+                    scoreImg.setImageResource(R.drawable.carousel_01);
+                    LinearLayout linearLayout = findViewById(R.id.score_layout);
+                    linearLayout.getLayoutParams().height = LinearLayout.LayoutParams.MATCH_PARENT;
+                    linearLayout.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
+//                    Intent intent = new Intent(QuestionActivity.this, ShowScoreActivity.class);
+//                    Bundle bundle = new Bundle();
+//                    System.out.println("算出来的结果："+ s);
+//                    bundle.putString("score", String.valueOf(s));
+//                    startActivity(intent);
+//                    QuestionActivity.this.finish();
                 }
 
             }

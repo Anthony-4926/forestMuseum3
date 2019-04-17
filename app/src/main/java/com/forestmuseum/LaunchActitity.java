@@ -11,7 +11,7 @@ public class LaunchActitity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_actitity);
-        Integer time = 1;
+        Integer time = 0;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

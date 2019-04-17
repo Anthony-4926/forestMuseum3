@@ -16,6 +16,28 @@ public class Unit01DetailActivity extends Activity {
     Map<Integer, Image> imgs = getImgs();
     int[] pic = new int[]{
             R.drawable.pic_1, R.drawable.pic_2, R.drawable.pic_3, R.drawable.pic_4
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
+
+            , R.drawable.pic_2, R.drawable.pic_3
     };
     ImageView imageView;
     ImageView imageView2;
@@ -63,12 +85,124 @@ public class Unit01DetailActivity extends Activity {
         }
     };
 
+    /**
+     *创建资源
+     * @return
+     */
 
     public  static Map<Integer, Image> getImgs(){
         Map<Integer, Image> imgs = new HashMap<>();
-
-
         System.out.println(R.raw.kongziniao);
+        imgs.put(R.drawable.pic_1,
+                new Image(R.drawable.pic_1,
+                        "孔子鸟",
+                        "孔子鸟是目前已知的最早拥有无齿角质喙部的鸟类。",
+                        R.raw.kongziniao));
+        imgs.put(R.drawable.pic_2,
+                new Image(R.drawable.pic_2,"巨型马陆",
+                        "巨型马陆，体长可以达到 3 米，而现在生活在地球上的马陆体长只有十几厘米左右。",
+                        R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_3, new Image(R.drawable.pic_3,"东北野牛" + "披毛犀",
+                "前方玻璃展柜里展示的是东北野牛和披毛犀的头骨化石，这些原来生活在新生代森林的动物在很久以前都已经灭绝",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_4, new Image(R.drawable.pic_4,"鹦鹉螺",
+                "我们现在来到的是奇妙的古生代时期。我们还可以看到在这个时期著名的鹦鹉螺也已经出现，它在地球上经历了数亿年的演变，被称为海洋中的活化石。",
+                R.raw.kongziniao));
+
+
+        /****************************************************/
+        imgs.put(R.drawable.pic_1,
+                new Image(R.drawable.pic_1,
+                        "孔子鸟",
+                        "孔子鸟是目前已知的最早拥有无齿角质喙部的鸟类。",
+                        R.raw.kongziniao));
+        imgs.put(R.drawable.pic_2,
+                new Image(R.drawable.pic_2,"巨型马陆",
+                        "巨型马陆，体长可以达到 3 米，而现在生活在地球上的马陆体长只有十几厘米左右。",
+                        R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_3, new Image(R.drawable.pic_3,"东北野牛" + "披毛犀",
+                "前方玻璃展柜里展示的是东北野牛和披毛犀的头骨化石，这些原来生活在新生代森林的动物在很久以前都已经灭绝",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_4, new Image(R.drawable.pic_4,"鹦鹉螺",
+                "我们现在来到的是奇妙的古生代时期。我们还可以看到在这个时期著名的鹦鹉螺也已经出现，它在地球上经历了数亿年的演变，被称为海洋中的活化石。",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_1,
+                new Image(R.drawable.pic_1,
+                        "孔子鸟",
+                        "孔子鸟是目前已知的最早拥有无齿角质喙部的鸟类。",
+                        R.raw.kongziniao));
+        imgs.put(R.drawable.pic_2,
+                new Image(R.drawable.pic_2,"巨型马陆",
+                        "巨型马陆，体长可以达到 3 米，而现在生活在地球上的马陆体长只有十几厘米左右。",
+                        R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_3, new Image(R.drawable.pic_3,"东北野牛" + "披毛犀",
+                "前方玻璃展柜里展示的是东北野牛和披毛犀的头骨化石，这些原来生活在新生代森林的动物在很久以前都已经灭绝",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_4, new Image(R.drawable.pic_4,"鹦鹉螺",
+                "我们现在来到的是奇妙的古生代时期。我们还可以看到在这个时期著名的鹦鹉螺也已经出现，它在地球上经历了数亿年的演变，被称为海洋中的活化石。",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_1,
+                new Image(R.drawable.pic_1,
+                        "孔子鸟",
+                        "孔子鸟是目前已知的最早拥有无齿角质喙部的鸟类。",
+                        R.raw.kongziniao));
+        imgs.put(R.drawable.pic_2,
+                new Image(R.drawable.pic_2,"巨型马陆",
+                        "巨型马陆，体长可以达到 3 米，而现在生活在地球上的马陆体长只有十几厘米左右。",
+                        R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_3, new Image(R.drawable.pic_3,"东北野牛" + "披毛犀",
+                "前方玻璃展柜里展示的是东北野牛和披毛犀的头骨化石，这些原来生活在新生代森林的动物在很久以前都已经灭绝",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_4, new Image(R.drawable.pic_4,"鹦鹉螺",
+                "我们现在来到的是奇妙的古生代时期。我们还可以看到在这个时期著名的鹦鹉螺也已经出现，它在地球上经历了数亿年的演变，被称为海洋中的活化石。",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_1,
+                new Image(R.drawable.pic_1,
+                        "孔子鸟",
+                        "孔子鸟是目前已知的最早拥有无齿角质喙部的鸟类。",
+                        R.raw.kongziniao));
+        imgs.put(R.drawable.pic_2,
+                new Image(R.drawable.pic_2,"巨型马陆",
+                        "巨型马陆，体长可以达到 3 米，而现在生活在地球上的马陆体长只有十几厘米左右。",
+                        R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_3, new Image(R.drawable.pic_3,"东北野牛" + "披毛犀",
+                "前方玻璃展柜里展示的是东北野牛和披毛犀的头骨化石，这些原来生活在新生代森林的动物在很久以前都已经灭绝",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_4, new Image(R.drawable.pic_4,"鹦鹉螺",
+                "我们现在来到的是奇妙的古生代时期。我们还可以看到在这个时期著名的鹦鹉螺也已经出现，它在地球上经历了数亿年的演变，被称为海洋中的活化石。",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_1,
+                new Image(R.drawable.pic_1,
+                        "孔子鸟",
+                        "孔子鸟是目前已知的最早拥有无齿角质喙部的鸟类。",
+                        R.raw.kongziniao));
+        imgs.put(R.drawable.pic_2,
+                new Image(R.drawable.pic_2,"巨型马陆",
+                        "巨型马陆，体长可以达到 3 米，而现在生活在地球上的马陆体长只有十几厘米左右。",
+                        R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_3, new Image(R.drawable.pic_3,"东北野牛" + "披毛犀",
+                "前方玻璃展柜里展示的是东北野牛和披毛犀的头骨化石，这些原来生活在新生代森林的动物在很久以前都已经灭绝",
+                R.raw.kongziniao));
+
+        imgs.put(R.drawable.pic_4, new Image(R.drawable.pic_4,"鹦鹉螺",
+                "我们现在来到的是奇妙的古生代时期。我们还可以看到在这个时期著名的鹦鹉螺也已经出现，它在地球上经历了数亿年的演变，被称为海洋中的活化石。",
+                R.raw.kongziniao));
+
         imgs.put(R.drawable.pic_1,
                 new Image(R.drawable.pic_1,
                         "孔子鸟",

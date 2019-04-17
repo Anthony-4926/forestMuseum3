@@ -27,6 +27,8 @@
         <activity android:name=".TipActivity" />
         <activity android:name=".Unit01DetailActivity"></activity>
         <activity android:name=".ItemFormatActivity"></activity>
+        <activity android:name=".ShowScoreActivity"></activity>
+<activity android:name=".RegistActivity"></activity>
     </application>
 
 </manifest>
