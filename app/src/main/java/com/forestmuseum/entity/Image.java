@@ -1,7 +1,5 @@
 package com.forestmuseum.entity;
 
-import android.util.Log;
-
 /**
  * @author xinzhao
  * @create 2019-04-17 9:10
@@ -12,13 +10,18 @@ public class Image {
     private String title;
     private String content;
     private int sound;
+    private String pinyin;
 
-    public Image(int id, String title, String content, int sound) {
+    public String getPinyin() {
+        return pinyin;
+    }
+
+    public Image(int id, String title, String pinyin, String content, int sound) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.sound = sound;
-        Log.d("构造的时候传过来的是", String.valueOf(sound));
+        this.pinyin = pinyin;
     }
 
     //下边内容与Image类无关,传递数据用的。

@@ -35,8 +35,12 @@
 
     </style>
 
-
-
+    <style name="seach_button_style">
+        <item name="android:background">@drawable/seach_button_shape</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
 
 
 

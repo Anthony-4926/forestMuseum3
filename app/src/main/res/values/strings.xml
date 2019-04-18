@@ -16,4 +16,15 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string-array name="tip_array">
+            <item>Afghanistan</item>
+            <item>Albania</item>
+            <item>Alqeria</item>
+            <item>American</item>
+            <item>Andorra</item>
+            <item>Angola</item>
+            <item>Anguilla</item>
+            <item>Antarctica</item>
+    </string-array>
 </resources>

@@ -22,7 +22,6 @@
         <RadioButton
             style="@style/radio_button_style"
             android:text="A. 中国" />
-
         <RadioButton
             style="@style/radio_button_style"
             android:text="B. 秘鲁" />
