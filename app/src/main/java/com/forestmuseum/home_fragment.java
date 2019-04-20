@@ -147,7 +147,7 @@ public class home_fragment extends Fragment {
 
         unit00.setOnClickListener(L);
         unit02.setOnClickListener(L);
-        unit03.setOnClickListener(L);
+//        unit03.setOnClickListener(L);
         unit04.setOnClickListener(L);
         unit05.setOnClickListener(L);
         unit06.setOnClickListener(L);
@@ -164,6 +164,16 @@ public class home_fragment extends Fragment {
                 mediaPlayer.start();
             }
         });
+        unit03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Unit03DetailActivity.class));
+                MediaPlayer mediaPlayer;
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.unit_03);
+                mediaPlayer.start();
+            }
+        });
+
     }
 
     //    对未开发单元统一监听

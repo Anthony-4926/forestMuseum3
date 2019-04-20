@@ -29,7 +29,8 @@
         <activity android:name=".ItemFormatActivity" />
         <activity android:name=".ShowScoreActivity" />
         <activity android:name=".RegistActivity" />
-        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".Unit03DetailActivity"></activity>
     </application>
 
 </manifest>

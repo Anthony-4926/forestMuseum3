@@ -39,5 +39,25 @@ public class ItemFormatActivity extends Activity {
                 }
             }
         });
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mediaPlayer!=null){
+            mediaPlayer.stop();
+
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mediaPlayer!=null){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer=null;
+        }
     }
 }

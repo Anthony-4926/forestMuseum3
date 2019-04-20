@@ -1,8 +1,8 @@
 package com.forestmuseum;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,21 +14,24 @@ import com.forestmuseum.entity.Image;
 import java.util.List;
 import java.util.Map;
 
-public class Unit01DetailActivity extends Activity {
-//    所有图片对象
-   private Map<Integer, Image> imgs = ImagesService.imgs;
-//    图片索引
+public class Unit03DetailActivity extends AppCompatActivity {
+    //    所有图片对象
+    private Map<Integer, Image> imgs = ImagesService.imgs;
+    //    图片索引
     private List<Integer> pic = ImagesService.pic;
     ImageView imageView;
     ImageView imageView2;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_unit01_detail);
-        LinearLayout left = findViewById(R.id.left_img);
-        LinearLayout right = findViewById(R.id.right_img);
+        setContentView(R.layout.activity_unit03_detail);
 
-        for (int i = 0; i < 5; i += 2) {
+        LinearLayout left = findViewById(R.id.left_img_3);
+        LinearLayout right = findViewById(R.id.right_img_3);
+
+        for (int i = 5; i < 22; i += 2) {
             imageView = new ImageView(this);
             imageView2 = new ImageView(this);
 
@@ -50,12 +53,14 @@ public class Unit01DetailActivity extends Activity {
             right.addView(imageView2 , layoutParamsImageView);
             imageView2.setOnClickListener(L);
         }
+
     }
-//    对图片进行监听
+
+    //    对图片进行监听
     View.OnClickListener L = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(Unit01DetailActivity.this, ItemFormatActivity.class);
+            Intent intent = new Intent(Unit03DetailActivity.this, ItemFormatActivity.class);
             Bundle bundle = new Bundle();
             bundle.putInt("id", v.getId());
             bundle.putInt("sound", imgs.get(v.getId()).getSound());

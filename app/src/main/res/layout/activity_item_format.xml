@@ -14,7 +14,7 @@
         android:paddingRight="7dp"
         android:paddingTop="7dp"
         android:paddingBottom="10dp"
-        android:background="#16e774">
+        android:background="@color/backcolor">
         <TextView
            android:layout_gravity="center"
             android:id="@+id/content_title"

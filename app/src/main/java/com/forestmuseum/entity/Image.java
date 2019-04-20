@@ -24,7 +24,6 @@ public class Image {
         this.pinyin = pinyin;
     }
 
-    //下边内容与Image类无关,传递数据用的。
 
 
     public int getId() {
