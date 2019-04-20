@@ -1,15 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelpFragment">
+    tools:context=".HelpFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/unit00"
-        android:scaleType="fitXY"/>
 
-</FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="40dp"
+        android:background="@color/backcolor">
+        <ImageView
+            android:id="@+id/help_head"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/head"/>
+
+        <TextView
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/help_dialog_back_img"
+            android:layout_toRightOf="@+id/help_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="嗨！有什么可以帮助\n你的呢"
+            android:textColor="@color/backcolor"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="你可能需要的帮助"
+        android:textColor="@color/backcolor"
+        android:textSize="25dp" />
+
+   <LinearLayout
+       android:background="@color/backcolor"
+       android:layout_width="match_parent"
+       android:layout_height="150dp">
+       <LinearLayout
+           android:id="@+id/help_text"
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/help_text"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:layout_toRightOf="@+id/help_text"
+           android:layout_gravity="center_vertical"
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:src="@drawable/emergence_img"
+               android:layout_marginBottom="5dp"/>
+           <ImageView
+               android:layout_marginTop="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:src="@drawable/emergence_img"/>
+
+       </LinearLayout>
+   </LinearLayout>
+
+
+
+
+</LinearLayout>

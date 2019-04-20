@@ -5,12 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".home_fragment">
+    <!--搜索框-->
     <LinearLayout
         android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/backcolor"
         android:orientation="horizontal">
+
         <SearchView
             android:id="@+id/search"
             android:layout_width="match_parent"
@@ -24,19 +26,19 @@
             android:focusable="true"
             android:focusableInTouchMode="false"
             android:iconifiedByDefault="false"
-            android:queryHint="我也可以搜索拼音呦">
-        </SearchView>
+            android:queryHint="我也可以搜索拼音呦"></SearchView>
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+<!--内容区域-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--轮播图-->
             <ViewFlipper
                 android:id="@+id/viewFlipper"
                 android:layout_width="match_parent"
@@ -44,31 +46,345 @@
                 android:paddingRight="0dp"
                 android:scaleType="fitXY"></ViewFlipper>
 
+            <!--单元列表-->
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <LinearLayout
                     android:id="@+id/unit_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
-            </ScrollView>
+                    android:orientation="vertical">
+
+                    <!--序厅-->
+                    <RelativeLayout
+
+                        android:id="@+id/unit_00"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_2">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_00_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00/序厅"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_00_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--序厅结束-->
+
+
+                    <!--第一单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_1">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_01_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="01/第一单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="森林的演化与分布"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_01_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第一单元结束-->
+
+                    <!--第二单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_2">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_02_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="02/第二单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="中国森林的分类与分布"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_02_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第二单元结束-->
+
+                    <!--第三单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_1">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_03_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="03/第三单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="森林动物"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_03_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第三单元结束-->
+
+                    <!--第四单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_2">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_04_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="04/第四单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="森林与人类"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="85dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_04_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第四单元结束-->
+
+                    <!--第五单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_1">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_05_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="05/第五单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="知识森林"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="85dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_05_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第五单元结束-->
+
+                    <!--第六单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_2">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_06_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="06/第六单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="走进森林"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_06_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第六单元结束-->
+
+                    <!--第七单元-->
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/unit_07"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/unit_list_back_img_1">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/unit_07_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="07/第七单元"
+                                android:textSize="20dp"
+                                android:textColor="@color/backcolor"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="保护森林"
+                                android:textColor="@color/backcolor"
+                                android:textSize="10dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginRight="30dp"
+                            android:layout_width="85dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/unit_07_img"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout><!--第七单元结束-->
+
+                </LinearLayout>
+            </ScrollView><!--单元列表结束-->
         </LinearLayout>
 
+        <!--自动提示-->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:id="@+id/seach_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
-                android:orientation="vertical"></LinearLayout>
-        </ScrollView>
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView><!--自动提示结束-->
+
     </FrameLayout>
 
 

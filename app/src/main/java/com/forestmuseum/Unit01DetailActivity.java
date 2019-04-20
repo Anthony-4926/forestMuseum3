@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -26,31 +27,38 @@ public class Unit01DetailActivity extends Activity {
         setContentView(R.layout.activity_unit01_detail);
         LinearLayout left = findViewById(R.id.left_img);
         LinearLayout right = findViewById(R.id.right_img);
+
         for (int i = 0; i < pic.size(); i += 2) {
             imageView = new ImageView(this);
             imageView2 = new ImageView(this);
-            // Log.d("这是第几个图片", String.valueOf(i));
+
+            LinearLayout.LayoutParams paramsImageView = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            imageView.setLayoutParams(paramsImageView);
+            LinearLayout.LayoutParams layoutParamsImageView = (LinearLayout.LayoutParams) imageView.getLayoutParams();
+            layoutParamsImageView.setMargins(10,10,10,10);
+
+            LinearLayout.LayoutParams paramsImageView2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            imageView.setLayoutParams(paramsImageView2);
+            LinearLayout.LayoutParams layoutParamsImageView2 = (LinearLayout.LayoutParams) imageView.getLayoutParams();
+            layoutParamsImageView.setMargins(10,10,10,10);
+
             imageView.setImageResource(pic.get(i));
             imageView.setId(pic.get(i));
             imageView.setAdjustViewBounds(true);
             imageView.setOnClickListener(L);
 
-            left.addView(imageView);
+            left.addView(imageView, layoutParamsImageView);
             imageView2.setImageResource(pic.get(i+1));
             imageView2.setAdjustViewBounds(true);
             imageView2.setId(pic.get(i+1));
-            right.addView(imageView2);
-
+            right.addView(imageView2 , layoutParamsImageView);
             imageView2.setOnClickListener(L);
-            //Log.d("+++++这是第几个图片", String.valueOf(i + 1));
         }
     }
-
+//    对图片进行监听
     View.OnClickListener L = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-//            String title = imgs.get(v.getId()).getTitle();
-//            Toast.makeText(MainActivity.this, title, Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(Unit01DetailActivity.this, ItemFormatActivity.class);
             Bundle bundle = new Bundle();
             bundle.putInt("id", v.getId());
@@ -61,8 +69,4 @@ public class Unit01DetailActivity extends Activity {
             startActivity(intent);
         }
     };
-
-
-
-
 }

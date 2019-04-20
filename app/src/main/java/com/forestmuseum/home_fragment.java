@@ -14,6 +14,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,11 +38,7 @@ public class home_fragment extends Fragment {
     private int[] images = new int[]{R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01};
     //    定义动画数组，为ViewFlipper指定切换动画
     private Animation[] animation = new Animation[2];
-    //    单元列表图片数组
-    private int[] unitList = new int[]{R.drawable.unit00, R.drawable.unit01, R.drawable.unit02, R.drawable.unit03,
-            R.drawable.unit04, R.drawable.unit05, R.drawable.unit06, R.drawable.unit07};
-
-//    自动提示需要的动物名字
+    //    自动提示需要的动物名字
     private List<String> names = ImagesService.getNames();
     private TextView seachItem;
     private LinearLayout seachList;
@@ -73,19 +70,19 @@ public class home_fragment extends Fragment {
             @Override
             public boolean onQueryTextChange(String newText) {
                 seachList.removeAllViews();
-                for (int j=0; j<names.size(); j++) {
+                for (int j = 0; j < names.size(); j++) {
                     boolean isExist = false;
-                    int i=0;
-                   if (newText.length()!=0 && ImagesService.imgs
-                           .get(ImagesService.getIdByPositon(j))
-                           .getPinyin()
-                           .contains(newText)){
-                        i=names.get(j).length();
-                       isExist = true;
-                   }
+                    int i = 0;
+                    if (newText.length() != 0 && ImagesService.imgs
+                            .get(ImagesService.getIdByPositon(j))
+                            .getPinyin()
+                            .contains(newText)) {
+                        i = names.get(j).length();
+                        isExist = true;
+                    }
 //                    判断是否已存在
                     for (; i < names.get(j).length(); i++) {
-                        if (newText != null && newText.contains(names.get(j).charAt(i) + "") ){
+                        if (newText != null && newText.contains(names.get(j).charAt(i) + "")) {
                             isExist = true;
                             break;
                         }
@@ -104,7 +101,7 @@ public class home_fragment extends Fragment {
                                 Intent intent = new Intent(getActivity(), ItemFormatActivity.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putInt("id", v.getId());
-                                bundle.putInt("sound",ImagesService.imgs.get(v.getId()).getSound());
+                                bundle.putInt("sound", ImagesService.imgs.get(v.getId()).getSound());
                                 bundle.putString("title", ImagesService.imgs.get(v.getId()).getTitle());
                                 bundle.putString("content", ImagesService.imgs.get(v.getId()).getContent());
                                 intent.putExtras(bundle);
@@ -139,40 +136,44 @@ public class home_fragment extends Fragment {
 
 
 /*******************************单元列表***********************************/
+        RelativeLayout unit00 = getActivity().findViewById(R.id.unit_00);
+        RelativeLayout unit01 = getActivity().findViewById(R.id.unit_01);
+        RelativeLayout unit02 = getActivity().findViewById(R.id.unit_02);
+        RelativeLayout unit03 = getActivity().findViewById(R.id.unit_03);
+        RelativeLayout unit04 = getActivity().findViewById(R.id.unit_04);
+        RelativeLayout unit05 = getActivity().findViewById(R.id.unit_05);
+        RelativeLayout unit06 = getActivity().findViewById(R.id.unit_06);
+        RelativeLayout unit07 = getActivity().findViewById(R.id.unit_07);
 
-        LinearLayout linearLayout = getActivity().findViewById(R.id.unit_list);
-        for (int i = 0; i < unitList.length; i++) {
-            ImageView imageView = new ImageView(getActivity());
-            imageView.setImageResource(unitList[i]);
-            imageView.setId(unitList[i]);
-//            imageView.setMaxHeight(70);
-            imageView.setAdjustViewBounds(true);
-
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            linearLayout.addView(imageView);
-            ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
-            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            //        添加监听
-
-            imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//                    Toast.makeText(getActivity(), String.valueOf(id),Toast.LENGTH_SHORT).show();
-                    if (v.getId() == unitList[1]) {
-                        startActivity(new Intent(getActivity(), Unit01DetailActivity.class));
-                        MediaPlayer mediaPlayer;
-                        mediaPlayer = MediaPlayer.create(getActivity(), R.raw.first_unit);
-                        mediaPlayer.start();
-                    } else {
-                        Toast.makeText(getActivity(), "单元待开发", Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-            });
-        }
+        unit00.setOnClickListener(L);
+        unit02.setOnClickListener(L);
+        unit03.setOnClickListener(L);
+        unit04.setOnClickListener(L);
+        unit05.setOnClickListener(L);
+        unit06.setOnClickListener(L);
+        unit07.setOnClickListener(L);
 
 
+        //        添加监听
+        unit01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Unit01DetailActivity.class));
+                MediaPlayer mediaPlayer;
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.first_unit);
+                mediaPlayer.start();
+            }
+        });
     }
+
+    //    对未开发单元统一监听
+    View.OnClickListener L = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getActivity(), "单元还没开发呦", Toast.LENGTH_SHORT).show();
+        }
+    };
+
 
     Handler handler = new Handler() {  //创建android.os.Handler对象
         @Override

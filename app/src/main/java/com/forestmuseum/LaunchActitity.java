@@ -15,8 +15,9 @@ public class LaunchActitity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-//                startActivity(new Intent(LaunchActitity.this,MainActivity.class));
-                startActivity(new Intent(LaunchActitity.this, LoginActivity.class));
+                startActivity(new Intent(LaunchActitity.this,MainActivity.class));
+//                startActivity(new Intent(LaunchActitity.this, LoginActivity.class));
+//                startActivity(new Intent(LaunchActitity.this, DialogActivity.class));
                 LaunchActitity.this.finish();
             }
         },time);

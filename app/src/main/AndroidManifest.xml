@@ -25,10 +25,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".QuestionActivity" />
         <activity android:name=".TipActivity" />
-        <activity android:name=".Unit01DetailActivity"></activity>
-        <activity android:name=".ItemFormatActivity"></activity>
-        <activity android:name=".ShowScoreActivity"></activity>
-<activity android:name=".RegistActivity"></activity>
+        <activity android:name=".Unit01DetailActivity" />
+        <activity android:name=".ItemFormatActivity" />
+        <activity android:name=".ShowScoreActivity" />
+        <activity android:name=".RegistActivity" />
+        <activity android:name=".DialogActivity"></activity>
     </application>
 
 </manifest>
