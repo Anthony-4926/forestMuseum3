@@ -20,14 +20,16 @@
             style="@style/question_title_style"
             android:text="6. 熊科动物中体型最小的是【 】。" />
         <RadioButton
+            android:id="@+id/q61"
             android:text="A. 黑熊"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q62"
             style="@style/radio_button_style"
             android:text="B. 马来熊" />
         <RadioButton
-
+            android:id="@+id/q63"
             style="@style/radio_button_style"
             android:text="C. 棕熊" />
 

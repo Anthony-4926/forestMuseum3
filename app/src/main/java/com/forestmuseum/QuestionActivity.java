@@ -41,6 +41,11 @@ public class QuestionActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+        FragmentManager fm = getFragmentManager();   // 获取Fragment
+        FragmentTransaction ft = fm.beginTransaction(); // 开启一个事务
+        ft.replace(R.id.questions, questionFragements[process]);
+        ft.commit(); //提交事务
+
 //        拿到进度条
         progressBar = findViewById(R.id.process_bar);
 //        拿到上一题按钮
@@ -94,12 +99,7 @@ public class QuestionActivity extends Activity {
                     LinearLayout linearLayout = findViewById(R.id.score_layout);
                     linearLayout.getLayoutParams().height = LinearLayout.LayoutParams.MATCH_PARENT;
                     linearLayout.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
-//                    Intent intent = new Intent(QuestionActivity.this, ShowScoreActivity.class);
-//                    Bundle bundle = new Bundle();
-//                    System.out.println("算出来的结果："+ s);
-//                    bundle.putString("score", String.valueOf(s));
-//                    startActivity(intent);
-//                    QuestionActivity.this.finish();
+//
                 }
 
             }

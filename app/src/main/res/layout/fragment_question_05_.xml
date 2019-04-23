@@ -20,14 +20,16 @@
             style="@style/question_title_style"
             android:text="5. 东北虎一胎可以产仔【 】只。" />
         <RadioButton
+            android:id="@+id/q51"
             android:text="A. 6-10"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q52"
             style="@style/radio_button_style"
             android:text="B. 1-2" />
         <RadioButton
-
+            android:id="@+id/q53"
             style="@style/radio_button_style"
             android:text="C. 1-5" />
 

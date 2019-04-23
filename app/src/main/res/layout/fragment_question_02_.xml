@@ -20,14 +20,16 @@
             style="@style/question_title_style"
             android:text="2. 世界上最小的鹤类是【 】" />
         <RadioButton
+            android:id="@+id/q21"
             android:text="A. 白枕鹤"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q22"
             style="@style/radio_button_style"
             android:text="B. 灰鹤" />
         <RadioButton
-
+            android:id="@+id/q23"
             style="@style/radio_button_style"
             android:text="C. 蓑羽鹤" />
     </RadioGroup>

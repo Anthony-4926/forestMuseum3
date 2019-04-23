@@ -21,9 +21,7 @@ public class Question_01Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_question_01, null);
         radioGroup = getActivity().findViewById(R.id.question1);
         System.out.println(QuestionActivity.userAnswer[0]);
-        if(QuestionActivity.userAnswer[0] != 0){
-            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[0])).setChecked(true);
-        }
+
         return view;
     }
     /**
@@ -33,12 +31,13 @@ public class Question_01Fragment extends Fragment {
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        if(QuestionActivity.userAnswer[0] != 0){
+            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[0])).setChecked(true);
+        }
         radioGroup = getActivity().findViewById(R.id.question1);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-
                 int id = radioGroup.getCheckedRadioButtonId();
                 QuestionActivity.userAnswer[0] = checkedId;
                 String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();

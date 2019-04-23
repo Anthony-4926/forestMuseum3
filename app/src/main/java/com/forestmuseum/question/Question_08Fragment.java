@@ -18,6 +18,9 @@ public class Question_08Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question_08_, null);
+        radioGroup = getActivity().findViewById(R.id.question1);
+//        System.out.println(QuestionActivity.userAnswer[0]);
+
         return view;
     }
 
@@ -29,10 +32,15 @@ public class Question_08Fragment extends Fragment {
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         radioGroup = getActivity().findViewById(R.id.question8);
+        if(QuestionActivity.userAnswer[7] != 0){
+            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[7])).setChecked(true);
+        }
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
+
+                QuestionActivity.userAnswer[7] = checkedId;
                 String anwser = ((RadioButton) getActivity().findViewById(id)).getText().toString();
                 System.out.println(anwser);
                 if ("A. 肉".equals(anwser)){

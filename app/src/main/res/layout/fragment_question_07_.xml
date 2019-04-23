@@ -17,12 +17,14 @@
         android:paddingBottom="25dp">
         <TextView
             style="@style/question_title_style"
-            android:text="小熊猫是大熊猫的幼仔。【 】" />
+            android:text="7. 小熊猫是大熊猫的幼仔。【 】" />
         <RadioButton
+            android:id="@+id/q71"
             android:text="A. 对"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q72"
             style="@style/radio_button_style"
             android:text="B. 错" />
 

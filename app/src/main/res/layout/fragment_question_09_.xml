@@ -20,14 +20,16 @@
             style="@style/question_title_style"
             android:text="9. 我馆所展出的金丝猴是【 】金丝猴。" />
         <RadioButton
+            android:id="@+id/q91"
             android:text="A. 川"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q92"
             style="@style/radio_button_style"
             android:text="B. 滇" />
         <RadioButton
-
+            android:id="@+id/q93"
             style="@style/radio_button_style"
             android:text="C. 黔" />
 

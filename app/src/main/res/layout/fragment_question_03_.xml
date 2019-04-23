@@ -20,14 +20,16 @@
             style="@style/question_title_style"
             android:text="3. 花面狸又称【 】。" />
         <RadioButton
+            android:id="@+id/q31"
             android:text="A. 果狸"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q32"
             style="@style/radio_button_style"
             android:text="B. 果子狸" />
         <RadioButton
-
+            android:id="@+id/q33"
             style="@style/radio_button_style"
             android:text="C. 果花狸" />
 </RadioGroup>

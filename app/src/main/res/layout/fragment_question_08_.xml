@@ -20,10 +20,12 @@
             style="@style/question_title_style"
             android:text="8. 大熊猫在远古时期是食【 】动物。" />
         <RadioButton
+            android:id="@+id/q81"
             android:text="A. 肉"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q82"
             style="@style/radio_button_style"
             android:text="B. 草" />
 

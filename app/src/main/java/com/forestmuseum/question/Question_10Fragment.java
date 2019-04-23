@@ -14,10 +14,17 @@ import com.forestmuseum.R;
 
 
 public class Question_10Fragment extends Fragment {
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question_10_, null);
+        radioGroup = getActivity().findViewById(R.id.question1);
+//        System.out.println(QuestionActivity.userAnswer[9]);
+        if(QuestionActivity.userAnswer[9] != 0){
+            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[9])).setChecked(true);
+        }
         return view;
     }
 
@@ -29,10 +36,15 @@ public class Question_10Fragment extends Fragment {
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         radioGroup = getActivity().findViewById(R.id.question10);
+        if(QuestionActivity.userAnswer[9] != 0){
+            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[7])).setChecked(true);
+        }
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
+
+                QuestionActivity.userAnswer[9] = checkedId;
                 String anwser = ((RadioButton) getActivity().findViewById(id)).getText().toString();
                 System.out.println(anwser);
                 if ("A. 雄".equals(anwser)){

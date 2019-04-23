@@ -18,10 +18,12 @@
             android:text="10. 【 】性别的蓝孔雀会开屏。" />
 
         <RadioButton
+            android:id="@+id/q101"
             style="@style/radio_button_style"
             android:text="A. 雄" />
 
         <RadioButton
+            android:id="@+id/q102"
             style="@style/radio_button_style"
             android:text="B. 雌" />
     </RadioGroup>

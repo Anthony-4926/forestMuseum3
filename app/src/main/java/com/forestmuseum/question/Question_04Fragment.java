@@ -22,6 +22,9 @@ public class Question_04Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question_04_, null);
+        radioGroup = getActivity().findViewById(R.id.question1);
+//        System.out.println(QuestionActivity.userAnswer[0]);
+
         return view;
     }
 
@@ -33,10 +36,15 @@ public class Question_04Fragment extends Fragment {
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         radioGroup = getActivity().findViewById(R.id.question4);
+        if(QuestionActivity.userAnswer[3] != 0){
+            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[3])).setChecked(true);
+        }
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
+
+                QuestionActivity.userAnswer[3] = checkedId;
                 String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
                 System.out.println(anwser);
                 if ("A. 体型小，颜色深".equals(anwser)){

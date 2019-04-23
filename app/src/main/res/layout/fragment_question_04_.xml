@@ -21,14 +21,16 @@
             style="@style/question_title_style"
             android:text="4. 华南虎与东北虎的区别在于【 】" />
         <RadioButton
+            android:id="@+id/q41"
             android:text="A. 体型小，颜色深"
             style="@style/radio_button_style"
             />
         <RadioButton
+            android:id="@+id/q42"
             style="@style/radio_button_style"
             android:text="B. 体型大，颜色深" />
         <RadioButton
-
+            android:id="@+id/q43"
             style="@style/radio_button_style"
             android:text="C. 体型小，颜色浅" />
 
