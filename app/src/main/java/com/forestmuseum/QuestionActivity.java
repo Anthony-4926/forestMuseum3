@@ -27,6 +27,7 @@ public class QuestionActivity extends Activity {
     private int process = 0;
     private ProgressBar progressBar;
     public static int[] scores= new int[10];
+    public static int[] userAnswer = new int[]{0,0,0,0,0,0,0,0,0,0};
     private Fragment[] questionFragements = new Fragment[]{
             new Question_01Fragment(), new Question_02Fragment(), new Question_03Fragment(),
             new Question_04Fragment(), new Question_05Fragment(), new Question_06Fragment(),

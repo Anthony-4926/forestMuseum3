@@ -20,14 +20,16 @@
             android:text="1. 欢乐女神蝶是【 】的国蝶。" />
 
         <RadioButton
+            android:id="@+id/q11"
             style="@style/radio_button_style"
             android:text="A. 中国" />
         <RadioButton
+            android:id="@+id/q12"
             style="@style/radio_button_style"
             android:text="B. 秘鲁" />
 
         <RadioButton
-
+            android:id="@+id/q13"
             style="@style/radio_button_style"
             android:text="C. 印度" />
 

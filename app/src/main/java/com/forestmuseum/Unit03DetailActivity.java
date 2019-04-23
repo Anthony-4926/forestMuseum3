@@ -19,8 +19,6 @@ public class Unit03DetailActivity extends AppCompatActivity {
     private Map<Integer, Image> imgs = ImagesService.imgs;
     //    图片索引
     private List<Integer> pic = ImagesService.pic;
-    ImageView imageView;
-    ImageView imageView2;
 
 
     @Override
@@ -31,9 +29,101 @@ public class Unit03DetailActivity extends AppCompatActivity {
         LinearLayout left = findViewById(R.id.left_img_3);
         LinearLayout right = findViewById(R.id.right_img_3);
 
-        for (int i = 5; i < 22; i += 2) {
-            imageView = new ImageView(this);
-            imageView2 = new ImageView(this);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                LinearLayout left = findViewById(R.id.left_img_3);
+                LinearLayout right = findViewById(R.id.right_img_3);
+                for (int i = 7; i <14; i += 2) {
+                    ImageView  imageView = new ImageView(Unit03DetailActivity.this);
+                    ImageView imageView2 = new ImageView(Unit03DetailActivity.this);
+
+                    LinearLayout.LayoutParams paramsImageView = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    imageView.setLayoutParams(paramsImageView);
+                    LinearLayout.LayoutParams layoutParamsImageView = (LinearLayout.LayoutParams) imageView.getLayoutParams();
+                    layoutParamsImageView.setMargins(10,10,10,10);
+
+
+                    imageView.setImageResource(pic.get(i));
+                    imageView.setId(pic.get(i));
+                    imageView.setAdjustViewBounds(true);
+                    imageView.setOnClickListener(L);
+
+                    left.addView(imageView, layoutParamsImageView);
+                    imageView2.setImageResource(pic.get(i+1));
+                    imageView2.setAdjustViewBounds(true);
+                    imageView2.setId(pic.get(i+1));
+                    right.addView(imageView2 , layoutParamsImageView);
+                    imageView2.setOnClickListener(L);
+                }
+            }
+        }).start();
+
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                LinearLayout left = findViewById(R.id.left_img_3);
+//                LinearLayout right = findViewById(R.id.right_img_3);
+//                for (int i = 13; i < 20; i += 2) {
+//                    ImageView  imageView = new ImageView(Unit03DetailActivity.this);
+//                    ImageView imageView2 = new ImageView(Unit03DetailActivity.this);
+//
+//                    LinearLayout.LayoutParams paramsImageView = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//                    imageView.setLayoutParams(paramsImageView);
+//                    LinearLayout.LayoutParams layoutParamsImageView = (LinearLayout.LayoutParams) imageView.getLayoutParams();
+//                    layoutParamsImageView.setMargins(10,10,10,10);
+//
+//
+//                    imageView.setImageResource(pic.get(i));
+//                    imageView.setId(pic.get(i));
+//                    imageView.setAdjustViewBounds(true);
+//                    imageView.setOnClickListener(L);
+//
+//                    left.addView(imageView, layoutParamsImageView);
+//                    imageView2.setImageResource(pic.get(i+1));
+//                    imageView2.setAdjustViewBounds(true);
+//                    imageView2.setId(pic.get(i+1));
+//                    right.addView(imageView2 , layoutParamsImageView);
+//                    imageView2.setOnClickListener(L);
+//                }
+//            }
+//        }).start();
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                LinearLayout left = findViewById(R.id.left_img_3);
+                LinearLayout right = findViewById(R.id.right_img_3);
+                for (int i = 15; i < 19; i += 2) {
+                    ImageView  imageView = new ImageView(Unit03DetailActivity.this);
+                    ImageView imageView2 = new ImageView(Unit03DetailActivity.this);
+
+                    LinearLayout.LayoutParams paramsImageView = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    imageView.setLayoutParams(paramsImageView);
+                    LinearLayout.LayoutParams layoutParamsImageView = (LinearLayout.LayoutParams) imageView.getLayoutParams();
+                    layoutParamsImageView.setMargins(10,10,10,10);
+
+
+                    imageView.setImageResource(pic.get(i));
+                    imageView.setId(pic.get(i));
+                    imageView.setAdjustViewBounds(true);
+                    imageView.setOnClickListener(L);
+
+                    left.addView(imageView, layoutParamsImageView);
+                    imageView2.setImageResource(pic.get(i+1));
+                    imageView2.setAdjustViewBounds(true);
+                    imageView2.setId(pic.get(i+1));
+                    right.addView(imageView2 , layoutParamsImageView);
+                    imageView2.setOnClickListener(L);
+                }
+            }
+        }).start();
+
+        for (int i = 21; i < 23; i += 2) {
+            ImageView  imageView = new ImageView(this);
+            ImageView imageView2 = new ImageView(this);
 
             LinearLayout.LayoutParams paramsImageView = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             imageView.setLayoutParams(paramsImageView);
@@ -53,7 +143,6 @@ public class Unit03DetailActivity extends AppCompatActivity {
             right.addView(imageView2 , layoutParamsImageView);
             imageView2.setOnClickListener(L);
         }
-
     }
 
     //    对图片进行监听

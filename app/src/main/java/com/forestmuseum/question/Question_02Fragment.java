@@ -31,10 +31,19 @@ public class Question_02Fragment extends Fragment {
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         radioGroup = getActivity().findViewById(R.id.question2);
+
+
+//        System.out.println(QuestionActivity.userAnswer[1]);
+//        if(QuestionActivity.userAnswer[1] != 0){
+//            ((RadioButton)getActivity().findViewById(QuestionActivity.userAnswer[1])).setChecked(true);
+//
+//        }
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int id = radioGroup.getCheckedRadioButtonId();
+                QuestionActivity.userAnswer[1] = checkedId;
+
                 String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
                 System.out.println(anwser);
                 if ("C. 蓑羽鹤".equals(anwser)){
