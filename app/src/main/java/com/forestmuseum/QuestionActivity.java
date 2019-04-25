@@ -4,12 +4,11 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.forestmuseum.question.Question_01Fragment;
@@ -54,8 +53,6 @@ public class QuestionActivity extends Activity {
         Button pre = findViewById(R.id.pre_question);
         //        拿到下一题按钮
         final Button next = findViewById(R.id.next_question);
-
-
 //        给上一题按钮添加监听
         pre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,54 +94,17 @@ public class QuestionActivity extends Activity {
                         s += scores[i];
                     }
                     Log.d("得分情况：", String.valueOf(s));
-                    ImageView scoreImg = findViewById(R.id.score_img);
-                    scoreImg.setImageResource(getpic(s));
-                    LinearLayout linearLayout = findViewById(R.id.score_layout);
-                    linearLayout.getLayoutParams().height = LinearLayout.LayoutParams.MATCH_PARENT;
-                    linearLayout.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
-//
+                    Intent intent = new Intent(QuestionActivity.this, ShowScoreActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("score", s);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    QuestionActivity.this.finish();
                 }
-
             }
         });
-
     }
 
 
-    public static int getpic(int s) {
-        int id = R.drawable.s0;
-        switch (s) {
-            case 1:
-                id = R.drawable.s10;
-                break;
-            case 2:
-                id = R.drawable.s20;
-                break;
-            case 3:
-                id = R.drawable.s30;
-                break;
-            case 4:
-                id = R.drawable.s40;
-                break;
-            case 5:
-                id = R.drawable.s50;
-                break;
-            case 6:
-                id = R.drawable.s60;
-                break;
-            case 7:
-                id = R.drawable.s70;
-                break;
-            case 8:
-                id = R.drawable.s80;
-                break;
-            case 9:
-                id = R.drawable.s90;
-                break;
-            case 10:
-                id = R.drawable.s100_;
-                break;
-        }
-        return id;
-    }
+
 }

@@ -6,12 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ShowScoreActivity">
 
-    <TextView
+    <!--<TextView-->
+        <!--android:id="@+id/score"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="50dp"-->
+        <!--android:text=""-->
+        <!--tools:layout_editor_absoluteX="163dp"-->
+        <!--tools:layout_editor_absoluteY="245dp"-->
+        <!--/>-->
+
+    <ImageView
         android:id="@+id/score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50dp"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="245dp"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
 </LinearLayout>
