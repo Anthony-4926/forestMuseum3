@@ -29,28 +29,32 @@
     <ImageView
         android:id="@+id/home"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="34dp"
         android:layout_weight="1"
         android:src="@drawable/home"
         />
     <ImageView
         android:id="@+id/location"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="34dp"
         android:layout_weight="1"
         android:src="@drawable/location"
         />
     <ImageView
         android:id="@+id/help"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="34dp"
         android:layout_weight="1"
-        android:src="@drawable/help"
+        android:src="@drawable/help_1"
         />
     <ImageView
         android:id="@+id/me"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="34dp"
         android:layout_weight="1"
         android:src="@drawable/me"
         />

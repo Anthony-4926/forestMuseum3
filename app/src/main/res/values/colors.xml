@@ -10,4 +10,5 @@
     <color name="radio_button_back_color">#08000000</color>
     <color name="question_title_back_color">#b329b3a2</color>
     <color name="question_anwser_color">#29b3a2</color>
+    <color name="help_back_color">#9929b3a2</color>
 </resources>

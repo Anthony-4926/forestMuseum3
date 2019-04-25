@@ -2,6 +2,7 @@ package com.forestmuseum.question;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,9 +20,6 @@ public class Question_01Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question_01, null);
-        radioGroup = getActivity().findViewById(R.id.question1);
-        System.out.println(QuestionActivity.userAnswer[0]);
-
         return view;
     }
     /**
@@ -38,8 +36,10 @@ public class Question_01Fragment extends Fragment {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+
                 int id = radioGroup.getCheckedRadioButtonId();
-                QuestionActivity.userAnswer[0] = checkedId;
+                QuestionActivity.userAnswer[0] = id;
+                Log.d("asdlfasdfl", "asldfjsaf");
                 String anwser = ((RadioButton)getActivity().findViewById(id)).getText().toString();
                 System.out.println(anwser);
                 if ("B. 秘鲁".equals(anwser)){
@@ -51,9 +51,4 @@ public class Question_01Fragment extends Fragment {
         });
     }
 
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
 }

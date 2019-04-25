@@ -47,7 +47,6 @@ public class ItemFormatActivity extends Activity {
         super.onStop();
         if(mediaPlayer!=null){
             mediaPlayer.stop();
-
         }
     }
 

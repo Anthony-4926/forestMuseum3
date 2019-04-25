@@ -20,18 +20,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/head"/>
                 <TextView
-                    android:padding="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@color/backcolor"
-                    android:textColor="#fff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="有什么可以帮你的呢"/>
+                    android:background="@drawable/dialog_frame_left"
+                    android:text="有什么可以帮助你的呢"
+                    android:textSize="18dp"
+                     />
             </LinearLayout>
 
         </LinearLayout>
@@ -52,7 +50,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/help" />
+            android:src="@drawable/help_1" />
 
         <EditText
             android:id="@+id/dialog_frame"

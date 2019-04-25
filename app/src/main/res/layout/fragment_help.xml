@@ -26,7 +26,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingRight="10dp"
-            android:background="@drawable/help_dialog_back_img"
+            android:background="@drawable/dialog_frame_help"
             android:layout_toRightOf="@+id/help_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,44 +41,58 @@
         android:gravity="center_horizontal"
         android:text="你可能需要的帮助"
         android:textColor="@color/backcolor"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
    <LinearLayout
-       android:background="@color/backcolor"
+       android:background="@color/help_back_color"
        android:layout_width="match_parent"
+       android:weightSum="10"
        android:layout_height="150dp">
        <LinearLayout
            android:id="@+id/help_text"
-           android:layout_weight="1"
-           android:layout_width="wrap_content"
+           android:layout_weight="6"
+           android:layout_width="match_parent"
            android:layout_height="match_parent">
            <ImageView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+               android:layout_width="100dp"
+               android:layout_height="45dp"
                android:layout_weight="1"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
                android:layout_gravity="center_vertical"
                android:src="@drawable/help_text"
                />
        </LinearLayout>
 
        <LinearLayout
-           android:layout_weight="1"
+           android:layout_weight="4"
            android:orientation="vertical"
            android:layout_toRightOf="@+id/help_text"
            android:layout_gravity="center_vertical"
-
            android:layout_width="wrap_content"
            android:layout_height="wrap_content">
            <ImageView
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:src="@drawable/emergence_img"
+               android:id="@+id/emer_help"
+               android:layout_width="match_parent"
+               android:paddingTop="18dp"
+               android:paddingBottom="18dp"
+               android:paddingLeft="20dp"
+               android:paddingRight="20dp"
+               android:layout_height="60dp"
+               android:src="@drawable/emergency_help"
+               android:background="#fff"
                android:layout_marginBottom="5dp"/>
            <ImageView
+               android:id="@+id/exhi_break"
                android:layout_marginTop="5dp"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:src="@drawable/emergence_img"/>
+               android:background="#fff"
+               android:layout_width="match_parent"
+               android:paddingTop="18dp"
+               android:paddingBottom="18dp"
+               android:paddingLeft="20dp"
+               android:paddingRight="20dp"
+               android:layout_height="60dp"
+               android:src="@drawable/exhibition_break"/>
 
        </LinearLayout>
    </LinearLayout>
