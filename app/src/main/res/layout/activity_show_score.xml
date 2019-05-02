@@ -4,22 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ShowScoreActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="得  分"
+        android:background="@color/backcolor"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:padding="7dp"
+        />
 
-    <!--<TextView-->
-        <!--android:id="@+id/score"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:textSize="50dp"-->
-        <!--android:text=""-->
-        <!--tools:layout_editor_absoluteX="163dp"-->
-        <!--tools:layout_editor_absoluteY="245dp"-->
-        <!--/>-->
-
-    <ImageView
+    <TextView
         android:id="@+id/score"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"/>
+        android:background="@drawable/s"
+        android:text="100"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textSize="65dp"
+        android:textStyle="bold|italic" />
 </LinearLayout>

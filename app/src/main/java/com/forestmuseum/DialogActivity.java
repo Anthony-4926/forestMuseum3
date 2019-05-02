@@ -67,7 +67,7 @@ public class DialogActivity extends Activity {
         int width = metric.widthPixels;// 屏幕宽度（像素）
         textView.setMaxWidth(width/7*4);
         textView.setBackgroundResource(R.drawable.dialog_frame_right);
-//                    textView.setPadding(0,50,50,0);
+                    textView.setPadding(50,20,60,20);
 
 //                    设置头像
         ImageView head = new ImageView(DialogActivity.this);

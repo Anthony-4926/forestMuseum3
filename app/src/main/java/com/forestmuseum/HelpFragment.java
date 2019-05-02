@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 
 
 public class HelpFragment extends Fragment {
+    MediaPlayer mediaPlayer;
 
     @Override
     @Nullable
@@ -55,19 +56,24 @@ public class HelpFragment extends Fragment {
         emer_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int k = 10;
-                while (k > 0) {
-                    MediaPlayer mediaPlayer;
-                    mediaPlayer = MediaPlayer.create(getActivity(), R.raw.alarm);
-                    mediaPlayer.start();
-                    try {
-                        Thread.sleep(1500);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.alarm);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        int k = 10;
+                        while (k > 0) {
+                            mediaPlayer.start();
+                            try {
+                                Thread.sleep(2000);
+                                k--;
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
                         mediaPlayer.release();
-                        k--;
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        mediaPlayer = null;
                     }
-                }
+                }).start();
             }
         });
 

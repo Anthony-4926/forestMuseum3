@@ -13,7 +13,7 @@
         <LinearLayout
             android:id="@+id/dialog_scope"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_marginTop="10dp"
@@ -29,6 +29,9 @@
                     android:background="@drawable/dialog_frame_left"
                     android:text="有什么可以帮助你的呢"
                     android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
                      />
             </LinearLayout>
 
