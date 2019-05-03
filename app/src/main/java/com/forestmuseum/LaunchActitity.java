@@ -11,12 +11,12 @@ public class LaunchActitity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_actitity);
-        Integer time = 0;
+        Integer time = 3000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(LaunchActitity.this,MainActivity.class));
-//                startActivity(new Intent(LaunchActitity.this, LoginActivity.class));
+//                startActivity(new Intent(LaunchActitity.this,MainActivity.class));
+                startActivity(new Intent(LaunchActitity.this, LoginActivity.class));
 //                startActivity(new Intent(LaunchActitity.this, DialogActivity.class));
                 LaunchActitity.this.finish();
             }
