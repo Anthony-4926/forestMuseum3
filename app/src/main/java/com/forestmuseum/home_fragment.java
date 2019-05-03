@@ -58,10 +58,10 @@ public class home_fragment extends Fragment {
         /**********************搜索框******************************/
 //        拿到搜索框和下列表
         seachList = getActivity().findViewById(R.id.seach_list);
-        seachList.clearFocus();
+
         seachItem = new TextView(getActivity());
         final SearchView searchView = getActivity().findViewById(R.id.search);
-
+        searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
