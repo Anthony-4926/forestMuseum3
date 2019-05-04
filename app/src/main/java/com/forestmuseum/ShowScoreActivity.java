@@ -12,6 +12,10 @@ public class ShowScoreActivity extends Activity {
         setContentView(R.layout.activity_show_score);
         TextView score = findViewById(R.id.score);
         score.setText(String.valueOf(getIntent().getIntExtra("score", 0)*10));
+        if (getIntent().getIntExtra("score", 0)>=8){
+            TextView gift = findViewById( R.id.gift_text);
+           gift.setVisibility(TextView.VISIBLE);
+        }
 //        score.setImageResource(getpic(getIntent().getIntExtra("score", 0)));
     }
 

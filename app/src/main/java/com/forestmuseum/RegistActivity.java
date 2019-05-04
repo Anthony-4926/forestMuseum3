@@ -37,8 +37,6 @@ public class RegistActivity extends Activity {
                     Toast.makeText(RegistActivity.this, "用户名不合法", Toast.LENGTH_SHORT).show();
                 }
 //                密码校验
-                System.out.println(DataCheck.isPassword(password));
-                System.out.println(DataCheck.isPassword(conPassword));
                 if (DataCheck.isPassword(password) && DataCheck.isPassword(conPassword)) {
                     if (!password.equals(conPassword)) {
                         Toast.makeText(RegistActivity.this, "密码不一致", Toast.LENGTH_SHORT).show();
@@ -51,6 +49,7 @@ public class RegistActivity extends Activity {
                 if (isLegal) {
 //                    持久化
                     UserService.saveProUserInfo(getApplicationContext(), new User(userName, password));
+                    RegistActivity.this.finish();
                 }
             }
         });
