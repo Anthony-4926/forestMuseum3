@@ -1,8 +1,8 @@
 package com.forestmuseum;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,7 +14,7 @@ import com.forestmuseum.entity.Image;
 import java.util.List;
 import java.util.Map;
 
-public class Unit03DetailActivity extends AppCompatActivity {
+public class Unit03DetailActivity extends Activity {
     //    所有图片对象
     private Map<Integer, Image> imgs = ImagesService.imgs;
     //    图片索引

@@ -35,7 +35,7 @@ public class home_fragment extends Fragment {
     //    声明消息对象
     private Message message;
     //    轮播图图片数组
-    private int[] images = new int[]{R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01, R.drawable.carousel_01};
+    private int[] images = new int[]{R.drawable.pic_10, R.drawable.pic_14, R.drawable.pic_8};
     //    定义动画数组，为ViewFlipper指定切换动画
     private Animation[] animation = new Animation[2];
     //    自动提示需要的动物名字
